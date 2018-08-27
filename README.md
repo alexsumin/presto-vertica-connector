@@ -1,7 +1,7 @@
-#Presto Vertica Connector
+# Presto Vertica Connector
 This is a plugin for Presto that allow you to use Vertica Jdbc Connection
 
-##Connection Configuration
+## Connection Configuration
 Create new properties file inside etc/catalog dir:
 
     connector.name=vertica 
@@ -18,15 +18,15 @@ Create a dir inside plugin dir called vertica. To make it easier you could copy 
     mv /home/Downloads/presto-vertica*.jar plugin/vertica
     mv /home/Downloads/vertica-jdbc-*.jar plugin/vertica
 
-##Building the project
+## Building the project
 To build Presto Vertica Connector, execute:
 
     mvn clean install
 
-##Vertica Driver
+## Vertica Driver
 Vertica Driver is not available in common repositories, so you will need to download it and install manually in your repository. It can be downloaded from https://my.vertica.com/download/vertica/client-drivers/
 
-##Install lib in your local repository
+## Install lib in your local repository
 You could install lib in your local repository using command
 
 `mvn install:install-file -Dfile=<path-to-file> -DgroupId=<group-id> 

@@ -25,7 +25,7 @@ public class VerticaClient extends BaseJdbcClient {
     }
 
     private static ConnectionFactory connectionFactory(BaseJdbcConfig config) {
-        checkArgument(config.getConnectionUrl() != null, "Invalid JDBC URL for vertica connector");
+        checkArgument(config.getConnectionUrl() != null, "Missing JDBC URL for vertica connector");
         checkArgument(config.getConnectionUser() != null, "Invalid JDBC User for vertica connector");
         checkArgument(config.getConnectionPassword() != null, "Invalid JDBC Password for vertica connector");
         Properties connectionProperties = basicConnectionProperties(config);
